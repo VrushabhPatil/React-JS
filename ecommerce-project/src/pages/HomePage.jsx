@@ -3,6 +3,14 @@ import { products } from "../../starting-code/data/products";
 import "./HomePage.css";
 
 export function HomePage() {
+  fetch("http://localhost:3000/api/products")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    });
+
   return (
     <>
       <title>Ecommerce Project</title>
@@ -63,7 +71,6 @@ export function HomePage() {
                 <button className="add-to-cart-button button-primary">
                   Add to Cart
                 </button>
-     
               </div>
             );
           })}
