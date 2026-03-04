@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { formatMoney } from "../../utils/money";
+import { test } from "./../../../node_modules/chai/lib/chai/utils/test";
 
 export function Product({ product, loadCart }) {
   const [quantity, setQuantity] = useState(1);
@@ -65,7 +66,11 @@ export function Product({ product, loadCart }) {
         Added
       </div>
 
-      <button className="add-to-cart-button button-primary" onClick={addToCart}>
+      <button
+        className="add-to-cart-button button-primary"
+        onClick={addToCart}
+        data-testid="add-to-cart-button"
+      >
         Add to Cart
       </button>
     </div>
