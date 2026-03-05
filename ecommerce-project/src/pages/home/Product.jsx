@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 import { formatMoney } from "../../utils/money";
-import { test } from "./../../../node_modules/chai/lib/chai/utils/test";
 
 export function Product({ product, loadCart }) {
   const [quantity, setQuantity] = useState(1);
