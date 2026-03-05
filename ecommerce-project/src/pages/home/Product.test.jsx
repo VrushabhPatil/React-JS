@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import axios from "axios";
-import { Product } from "./Product";
+import { Product } from "./Product.jsx";
 
 vi.mock("axios");
 

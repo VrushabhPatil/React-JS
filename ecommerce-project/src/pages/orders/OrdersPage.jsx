@@ -1,8 +1,8 @@
 import axios from "axios";
 import dayjs from "dayjs";
 import { useEffect, useState, Fragment } from "react";
-import { Header } from "../../components/Header";
-import { formatMoney } from "../../utils/money";
+import { Header } from "../../components/Header.jsx";
+import { formatMoney } from "../../utils/money.js";
 import "./OrdersPage.css";
 
 export function OrdersPage({ cart }) {
@@ -76,7 +76,7 @@ export function OrdersPage({ cart }) {
                             Arriving on:{" "}
                             {orderProduct?.estimatedDeliveryTimeMs
                               ? dayjs(
-                                  orderProduct.estimatedDeliveryTimeMs
+                                  orderProduct.estimatedDeliveryTimeMs,
                                 ).format("MMMM D")
                               : "TBD"}
                           </div>
